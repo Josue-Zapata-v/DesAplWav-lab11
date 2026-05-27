@@ -280,11 +280,11 @@ export function TeamTab() {
           <Select value={data.projectId} onValueChange={(v) => set({ ...data, projectId: v })}>
             <SelectTrigger><SelectValue placeholder="Sin proyecto" /></SelectTrigger>
             <SelectContent>
-              <SelectItem value="">Sin proyecto</SelectItem>
-              {projects.map((p) => (
-                <SelectItem key={p.id} value={p.id}>{p.name}</SelectItem>
-              ))}
-            </SelectContent>
+                <SelectItem value="none">Sin proyecto</SelectItem>
+                {projects.map((p) => (
+                  <SelectItem key={p.id} value={p.id}>{p.name}</SelectItem>
+                ))}
+              </SelectContent>
           </Select>
         </div>
       </div>
